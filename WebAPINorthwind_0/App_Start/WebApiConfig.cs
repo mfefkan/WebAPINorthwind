@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace WebAPINorthwind_0
 {
@@ -9,8 +10,10 @@ namespace WebAPINorthwind_0
     {
         public static void Register(HttpConfiguration config)
         {
-            //Cross Origins
+            //Cross Origins Resource Server
 
+            EnableCorsAttribute cors = new EnableCorsAttribute("*","*","*");
+            config.EnableCors(cors);
 
             // Web API configuration and services
 
