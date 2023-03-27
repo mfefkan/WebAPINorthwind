@@ -83,7 +83,7 @@ namespace WebAPINorthwind_0.Controllers
             return ListCategories();
         }
 
-        [HttpPost]
+        [HttpGet]
         public List<CategoryResponseModel> SearchCategory(string item)
         {
             return _db.Categories.Where(x => x.CategoryName.Contains(item)).Select(x => new CategoryResponseModel

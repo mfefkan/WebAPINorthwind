@@ -9,6 +9,9 @@ namespace WebAPINorthwind_0
     {
         public static void Register(HttpConfiguration config)
         {
+            //Cross Origins
+
+
             // Web API configuration and services
 
             // Web API routes
